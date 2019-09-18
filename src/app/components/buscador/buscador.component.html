@@ -1,0 +1,28 @@
+<h1>Productos Encontrados</h1>
+<hr>
+
+<div class="row animated fadeIn fast" *ngIf="productosEncontrados.length == 0">
+  <div class="col-md-12">
+    <div class="alert alert-info" role="alert">
+      No existen resultados para el producto: "{{termino}}"
+    </div>
+  </div>
+</div>
+
+<div class="card-columns">
+  <div class="card animated fadeIn fast" *ngFor="let product of productosEncontrados ; let i = index">
+    <img  src="{{product.img}}" class="card-img-top"
+          alt="{{product.nombre}}">
+    <div class="card-body">
+      <h5 class="card-title">{{product.nombre}}</h5>
+      <p class="card-text">{{product.bio}}</p>
+      <p class="card-text"><small class="text-muted">{{product.aparicion}}</small></p>
+
+      <button (click)="verProducto(product.nombre)"
+        type="button" class="btn btn-outline-primary btn-block">Ver mas...</button>
+
+      <!-- <a [routerLink]="['/productPage',i]" class="btn btn-outline-primary btn-block">Ver mas Link...</a> -->
+    </div>
+  </div>
+
+</div>
