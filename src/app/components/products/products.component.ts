@@ -3,24 +3,21 @@ import { Router } from '@angular/router';
 import { ProductsService, Product } from '../../services/products.service';
 
 @Component({
-  selector: 'app-products',
-  templateUrl: './products.component.html'
+    selector: 'app-products',
+    templateUrl: './products.component.html'
 })
 export class ProductsComponent implements OnInit {
+    products: Product[] = [];
 
-  products:Product[] = [];
+    constructor(private _productsService: ProductsService, private router: Router) {}
 
-  constructor( private _productsService:ProductsService,
-               private router:Router
-  ) {}
+    ngOnInit() {
+        this.products = this._productsService.getProducts();
+        console.log(1);
+        console.log(this.products);
+    }
 
-  ngOnInit() {
-    this.products = this._productsService.getProducts();
-    console.log(this.products);
-  }
-
-  verProducto (idx:number){
-    this.router.navigate(['/productPage',idx]);
-  }
-
+    verProducto(idx: number) {
+        this.router.navigate(['/productPage', idx]);
+    }
 }

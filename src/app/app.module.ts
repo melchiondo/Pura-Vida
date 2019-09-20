@@ -18,23 +18,18 @@ import { BuscadorComponent } from './components/buscador/buscador.component';
 import { ProductPageSearchComponent } from './components/productPageSearch/productPageSearch.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    NavbarComponent,
-    HomeComponent,
-    AboutComponent,
-    ProductsComponent,
-    ProductPageComponent,
-    BuscadorComponent,
-    ProductPageSearchComponent
-  ],
-  imports: [
-    BrowserModule,
-    APP_ROUTING
-  ],
-  providers: [
-    ProductsService
-  ],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        NavbarComponent,
+        HomeComponent,
+        AboutComponent,
+        ProductsComponent,
+        ProductPageComponent,
+        BuscadorComponent,
+        ProductPageSearchComponent
+    ],
+    imports: [BrowserModule, APP_ROUTING],
+    providers: [ProductsService],
+    bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

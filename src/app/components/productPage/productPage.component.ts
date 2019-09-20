@@ -1,26 +1,26 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ProductsService } from '../../services/products.service';
 
 @Component({
-  selector: 'app-productPage',
-  templateUrl: './productPage.component.html'
+    selector: 'app-productPage',
+    templateUrl: './productPage.component.html'
 })
 export class ProductPageComponent {
+    private product: any = {};
 
-  private product:any = {};
+    constructor(
+        private activatedRoute: ActivatedRoute,
+        private _productsService: ProductsService,
+        private router: Router
+    ) {
+        this.activatedRoute.params.subscribe(params => {
+            this.product = this._productsService.getProduct(params['id']);
+            console.log(this.product);
+        });
+    }
 
-  constructor( private activatedRoute:ActivatedRoute,
-               private _productsService:ProductsService,
-  ) {
-    this.activatedRoute.params.subscribe( params=> {
-      this.product = this._productsService.getProduct(params['id']);
-      console.log(this.product);
-    })
-  }
-
-  verProducto (idx:number){
-    this.router.navigate(['/productPage',idx]);
-  }
-
+    verProducto(idx: number) {
+        this.router.navigate(['/productPage', idx]);
+    }
 }
