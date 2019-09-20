@@ -1,0 +1,40 @@
+<div class="jumbotron jumbotron-fluid animated fadeIn fast">
+    <div class="container">
+        <h1 class="display-4">Productos</h1>
+        <p class="lead">Los <strong>Súper Héroes</strong> más poderosos del universo</p>
+    </div>
+</div>
+<div class="container">
+    <div class="input-group pb-4">
+        <input
+            type="text"
+            class="form-control"
+            placeholder="Escriba el nombre de su super héroe favorito"
+            aria-label="Recipient's username with two button addons"
+            aria-describedby="button-addon4"
+        />
+        <div class="input-group-append" id="button-addon4">
+            <button class="btn btn-outline-secondary" type="button">Buscar</button>
+        </div>
+    </div>
+    <div class="card-columns">
+        <div class="card animated fadeIn fast" *ngFor="let product of products; let i = index">
+            <img
+                class="card-img-top"
+                [src]="product.img"
+                [alt]="product.nombre"
+                [title]="'Súper Héroe: ' + product.nombre"
+            />
+            <div class="card-body">
+                <h5 class="card-title">{{ product.nombre }}</h5>
+                <p class="card-text">{{ product.bio }}</p>
+                <p class="card-text">
+                    <small class="text-muted">{{ product.aparicion }}</small>
+                </p>
+                <button (click)="verProducto(i)" type="button" class="btn btn-outline-primary btn-block">
+                    Ver mas...
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
