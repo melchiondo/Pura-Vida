@@ -10,16 +10,22 @@
 </div>
 
 <div class="card-columns">
-  <div class="card animated fadeIn fast" *ngFor="let product of productosEncontrados ; let i = index">
-    <img  src="{{product.img}}" class="card-img-top"
+
+  <div *ngFor="let product of productosEncontrados ; let i = index"
+  class="card animated fadeIn fast shadow p-3 mb-5 bg-white rounded">
+    <img  src="{{product.imgPortada}}" class="card-img-top"
           alt="{{product.nombre}}">
     <div class="card-body">
       <h5 class="card-title">{{product.nombre}}</h5>
-      <p class="card-text">{{product.bio}}</p>
-      <p class="card-text"><small class="text-muted">{{product.aparicion}}</small></p>
+      <p class="card-text">{{product.descCorta}}</p>
+      <span *ngIf="product.moneda=='peso'" class="badge badge-primary">$ {{product.precio}}</span>
+      <span *ngIf="product.moneda=='dolar'" class="badge badge-primary">U$S {{product.precio}}</span>
 
-      <button (click)="verProducto(product.nombre)"
+      <p class="card-text"><small class="text-muted">{{product.temporada}}</small></p>
+
+      <button (click)="verProducto(i)"
         type="button" class="btn btn-outline-primary btn-block">Ver mas...</button>
+
 
       <!-- <a [routerLink]="['/productPage',i]" class="btn btn-outline-primary btn-block">Ver mas Link...</a> -->
     </div>
