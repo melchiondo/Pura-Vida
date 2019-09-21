@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProductsService, Product } from '../../services/products.service';
 
@@ -10,6 +10,8 @@ export class BuscadorComponent implements OnInit {
 
   private productosEncontrados:Product[] = [];
   private termino:string;
+  @Input() prodTarjeta:Product;
+  @Input() index:number;
 
   constructor( private activatedRoute:ActivatedRoute,
                private _productsService:ProductsService,
@@ -18,10 +20,10 @@ export class BuscadorComponent implements OnInit {
 
   ngOnInit() {
       this.activatedRoute.params.subscribe(params => {
-        this.termino = params['termino'];
-        console.log(this.termino);
-        this.productosEncontrados = this._productsService.buscarProductos(params['termino'])
-        console.log(this.productosEncontrados);
+      this.termino = params['termino'];
+      console.log(this.termino);
+      this.productosEncontrados = this._productsService.buscarProductos(params['termino'])
+      console.log(this.productosEncontrados);
     })
   }
 

@@ -16,6 +16,7 @@ import { ProductsComponent } from './components/products/products.component';
 import { ProductPageComponent } from './components/productPage/productPage.component';
 import { BuscadorComponent } from './components/buscador/buscador.component';
 import { ProductPageSearchComponent } from './components/productPageSearch/productPageSearch.component';
+import { TarjetaProductoComponent } from './components/tarjetaProducto/tarjetaProducto.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ProductPageSearchComponent } from './components/productPageSearch/produ
     ProductsComponent,
     ProductPageComponent,
     BuscadorComponent,
-    ProductPageSearchComponent
+    ProductPageSearchComponent,
+    TarjetaProductoComponent
   ],
   imports: [
     BrowserModule,
