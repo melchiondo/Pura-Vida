@@ -12,7 +12,7 @@ export class ProductsService {
         descCorta: "Bikini sin costura Amarilla con volados",
         descLarga: "Esta Bikini sin costura Amarilla consta de dos finas piezas con volados perfecta para el calce",
         imgPortada: "assets/img/productos/Malla1.jpeg",
-        imgLista: ["assets/img/productos/Malla2.jpeg","assets/img/productos/Malla3.jpeg"],
+        imgLista: ["assets/img/productos/Malla2.jpeg","assets/img/productos/Malla3.jpeg","assets/img/productos/Malla4.jpeg"],
         temporada: "Temporada 19/20",
         marca: "Pura Vida",
         precio: "420,00",
