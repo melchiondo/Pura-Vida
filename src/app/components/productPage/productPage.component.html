@@ -1,6 +1,6 @@
 <div class="row animated fadeIn fast">
   <div class="col-md-4">
-    <a [routerLink]="['/products']" class="btn btn-outline-danger btn-block">Regresar</a>
+    <a [routerLink]="['/products']" class="btn btn-danger btn-block">Regresar</a>
   </div>
 </div>
 
@@ -54,7 +54,7 @@
     <!-- <hr> -->
     <p>{{product.descCorta}}</p>
 
-  <div class="container">
+  <div class="container text-success">
     <h1 *ngIf="product.moneda=='peso'">${{product.precio}}</h1>
     <h1 *ngIf="product.moneda=='dolar'">U$S {{product.precio}}</h1>
   </div>
