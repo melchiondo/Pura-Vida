@@ -1,6 +1,31 @@
-<div class="jumbotron jumbotron-fluid animated fadeIn fast">
-  <div class="container">
-    <h1 class="display-4">Pura Vida</h1>
-    <p class="lead">Mallas a todo ritmo. Precio y calidad!</p>
-  </div>
-</div>
+<html lang="en">
+  <body class="text-center animated fadeIn fast bg-secondary">
+
+    <div class="">
+
+      <main role="main" class="animated fadeIn fast home-desc">
+        <h1 class="">Pura Vida</h1>
+
+        <div class="row">
+          <div class="col-md-2"></div>
+          <div class="col-md-8">
+            <p class="lead">Visitá nuestro store y encontrarás productos de primera calidad. Aprovechá las ofertas y promociones de la temporada '19/'20 que ponemos a tu disposición. </p>
+          </div>
+          <div class="col-md-2"></div>
+        </div>
+
+        <div class="row animated fadeIn fast">
+          <div class="col-md-1"></div>
+          <div class="col-md-5">
+            <a [routerLink]="['/products']" class="btn btn-dark btn-block">Ver Productos</a>
+          </div>
+          <div class="col-md-5">
+              <a [routerLink]="['/about']" class="btn btn-outline-dark btn-block">Contactanos</a>
+          </div>
+          <div class="col-md-1"></div>
+        </div>
+      </main>
+
+    </div>
+  </body>
+</html>

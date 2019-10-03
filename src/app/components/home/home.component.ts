@@ -1,14 +1,17 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductsService } from '../../services/products.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html'
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
 
-  constructor() { }
+  product:any = {};
 
-  ngOnInit() {
+  constructor(private _productsService:ProductsService) {
+    this.product = this._productsService.getProduct(0);
   }
+
 
 }

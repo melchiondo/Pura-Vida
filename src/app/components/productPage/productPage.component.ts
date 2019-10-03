@@ -13,7 +13,7 @@ export class ProductPageComponent {
   constructor( private activatedRoute:ActivatedRoute,
                private _productsService:ProductsService,
   ) {
-    this.activatedRoute.params.subscribe( params=> {
+      this.activatedRoute.params.subscribe( params=> {
       this.product = this._productsService.getProduct(params['id']);
       console.log(this.product);
     })

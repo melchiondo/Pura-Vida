@@ -6,7 +6,19 @@ body{
   margin-top: 20px;
 }
 
+.home-desc{
+  padding-bottom: 0px;
+  margin-top: 120px;
+  margin-bottom: 0px;
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
 .logo{
+  width: 120px;
+}
+
+.ancho{
   width: 120px;
 }
 
