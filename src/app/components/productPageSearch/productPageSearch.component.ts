@@ -8,7 +8,7 @@ import { ProductsService } from '../../services/products.service';
 })
 export class ProductPageSearchComponent {
 
-  private product:any = {};
+  product:any = {};
 
   constructor( private activatedRoute:ActivatedRoute,
                private _productsService:ProductsService

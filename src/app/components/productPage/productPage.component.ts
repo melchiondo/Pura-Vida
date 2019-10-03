@@ -8,7 +8,7 @@ import { ProductsService } from '../../services/products.service';
 })
 export class ProductPageComponent {
 
-  private product:any = {};
+  product:any = {};
 
   constructor( private activatedRoute:ActivatedRoute,
                private _productsService:ProductsService,
@@ -19,8 +19,8 @@ export class ProductPageComponent {
     })
   }
 
-  verProducto (idx:number){
-    this.router.navigate(['/productPage',idx]);
-  }
+  // verProducto (idx:number){
+  //   this.router.navigate(['/productPage',idx]);
+  // }
 
 }

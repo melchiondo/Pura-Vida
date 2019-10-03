@@ -8,8 +8,8 @@ import { ProductsService, Product } from '../../services/products.service';
 })
 export class BuscadorComponent implements OnInit {
 
-  private productosEncontrados:Product[] = [];
-  private termino:string;
+  productosEncontrados:Product[] = [];
+  termino:string;
   @Input() prodTarjeta:Product;
   @Input() index:number;
 
