@@ -1,4 +1,5 @@
-<div class="card animated fadeIn fast shadow p-3 mb-5 bg-white rounded">
+<div type="button" (click)="verProducto(index)"
+class="card animated fadeIn fast shadow p-3 mb-5 bg-white rounded">
   <img src="{{prodTarjeta.imgPortada}}" class="card-img-top" alt="{{prodTarjeta.nombre}}">
   <div class="card-body">
     <h5 class="card-title">{{prodTarjeta.nombre}}</h5>
@@ -8,8 +9,8 @@
 
     <p class="card-text"><small class="text-muted">{{prodTarjeta.temporada}}</small></p>
 
-    <button (click)="verProducto(index)"
-      type="button" class="btn btn-outline-primary btn-block">Ver mas...</button>
+    <!-- <button (click)="verProducto(index)"
+      type="button" class="btn btn-outline-primary btn-block">Ver mas...</button> -->
 
     <!-- <a [routerLink]="['/productPage',i]" class="btn btn-outline-primary btn-block">Ver mas Link...</a> -->
   </div>
