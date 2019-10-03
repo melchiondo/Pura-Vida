@@ -17,6 +17,7 @@ import { ProductPageComponent } from './components/productPage/productPage.compo
 import { BuscadorComponent } from './components/buscador/buscador.component';
 import { ProductPageSearchComponent } from './components/productPageSearch/productPageSearch.component';
 import { TarjetaProductoComponent } from './components/tarjetaProducto/tarjetaProducto.component';
+import { FooterComponent } from './components/shared/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { TarjetaProductoComponent } from './components/tarjetaProducto/tarjetaPr
     ProductPageComponent,
     BuscadorComponent,
     ProductPageSearchComponent,
-    TarjetaProductoComponent
+    TarjetaProductoComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
