@@ -51,6 +51,10 @@ body{
   filter: alpha(opacity=50); /* For IE8 and earlier */
 }
 
+.center{
+  padding: 10px;
+}
+
 .logo{
   width: 120px;
 }
