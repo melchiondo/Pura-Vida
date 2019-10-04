@@ -14,9 +14,25 @@ body{
   margin-left: 0px;
 }
 
+.home-top{
+  padding-bottom: 0px;
+  margin-top: 85px;
+  margin-bottom: 0px;
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
 .titulo{
   padding-bottom: 0px;
   margin-top: 100px;
+  margin-bottom: 0px;
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+.sin-margen{
+  padding-bottom: 0px;
+  margin-top: 0px;
   margin-bottom: 0px;
   margin-right: 0px;
   margin-left: 0px;
@@ -30,8 +46,18 @@ body{
   color: white;
 }
 
+.transp {
+  opacity: 0.5;
+  filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
 .logo{
   width: 120px;
+}
+
+body{
+  background-repeat:no-repeat;
+  background-size:cover;
 }
 
 /* Animaciones */
