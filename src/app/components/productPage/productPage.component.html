@@ -1,165 +1,169 @@
-<div class="row titulo animated fadeIn fast">
-  <div class="col-md-2">
-    <a [routerLink]="['/products']" class="align-left btn btn-danger btn-block">Regresar</a>
+<div class="container main-container">
+
+  <div class="row titulo animated fadeIn fast">
+    <div class="col-md-2">
+      <a [routerLink]="['/products']" class="align-left btn btn-danger btn-block">Regresar</a>
+    </div>
   </div>
-</div>
 
-<p></p>
+  <p></p>
 
-<div class="row animated fadeIn fast shadow p-3 mb-5 bg-white rounded">
-  <div class="container">
-    <h6>{{product.marca}} > {{product.tipo}}</h6>
-    <hr>
-  </div>
-  <div class="col-md-5">
+  <div class="row animated fadeIn fast shadow p-3 mb-5 bg-white rounded">
+    <div class="container">
+      <h6>{{product.marca}} > {{product.tipo}}</h6>
+      <hr>
+    </div>
+    <div class="col-md-5">
 
-    <!-- <img src="{{product.imgPortada}}" class="img-fluid" alt="{{product.descCorta}}"> -->
+      <!-- <img src="{{product.imgPortada}}" class="img-fluid" alt="{{product.descCorta}}"> -->
 
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-      <ol class="carousel-indicators">
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
 
-        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
 
-        <li *ngFor="let imagenes of product.imgLista; let i = index"
-          data-target="#carouselExampleIndicators" data-slide-to="i+1"></li>
+          <li *ngFor="let imagenes of product.imgLista; let i = index"
+            data-target="#carouselExampleIndicators" data-slide-to="i+1"></li>
 
-      </ol>
-      <div class="carousel-inner">
+        </ol>
+        <div class="carousel-inner">
 
-        <div class="carousel-item active">
-          <img src="{{product.imgPortada}}" class="d-block w-100" alt="...">
+          <div class="carousel-item active">
+            <img src="{{product.imgPortada}}" class="d-block w-100" alt="...">
+          </div>
+
+          <div *ngFor="let imagenes of product.imgLista" class="carousel-item">
+            <img src="{{imagenes}}" class="d-block w-100" alt="...">
+          </div>
+
         </div>
-
-        <div *ngFor="let imagenes of product.imgLista" class="carousel-item">
-          <img src="{{imagenes}}" class="d-block w-100" alt="...">
-        </div>
-
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
       </div>
-      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
+
+
+      <br><br>
     </div>
 
+    <div class="col-md-7">
+      <h3>{{product.nombre}} <small>{{product.temporada}}</small> </h3>
+      <!-- <hr> -->
+      <p>{{product.descCorta}}</p>
 
-    <br><br>
-  </div>
-
-  <div class="col-md-7">
-    <h3>{{product.nombre}} <small>{{product.temporada}}</small> </h3>
-    <!-- <hr> -->
-    <p>{{product.descCorta}}</p>
-
-  <div class="container text-success">
-    <h1 *ngIf="product.moneda=='peso'">${{product.precio}}</h1>
-    <h1 *ngIf="product.moneda=='dolar'">U$S {{product.precio}}</h1>
-  </div>
-
-   <div class="row animated fadeIn fast">
+    <div class="container text-success">
+      <h1 *ngIf="product.moneda=='peso'">${{product.precio}}</h1>
+      <h1 *ngIf="product.moneda=='dolar'">U$S {{product.precio}}</h1>
+    </div>
 
      <div class="row animated fadeIn fast">
 
-         <div class="col-md-1"></div>
+       <div class="row animated fadeIn fast">
 
-         <div class="col-md-3">Cantidad
-           <select class="form-control" id="exampleFormControlSelect1">
-             <option>1</option>
-             <option>2</option>
-             <option>3</option>
-           </select>
-         </div>
+           <div class="col-md-1"></div>
 
-         <div class="col-md-3">Talle
-           <select class="form-control" id="exampleFormControlSelect1">
-             <option>80</option>
-             <option>85</option>
-             <option>90</option>
-           </select>
-         </div>
+           <div class="col-md-3">Cantidad
+             <select class="form-control" id="exampleFormControlSelect1">
+               <option>1</option>
+               <option>2</option>
+               <option>3</option>
+             </select>
+           </div>
 
-         <div class="col-md-3">Color
-           <select class="form-control" id="exampleFormControlSelect1">
-             <option>Negro</option>
-             <option>Rosa</option>
-             <option>Verde</option>
-           </select>
-         </div>
+           <div class="col-md-3">Talle
+             <select class="form-control" id="exampleFormControlSelect1">
+               <option>80</option>
+               <option>85</option>
+               <option>90</option>
+             </select>
+           </div>
+
+           <div class="col-md-3">Color
+             <select class="form-control" id="exampleFormControlSelect1">
+               <option>Negro</option>
+               <option>Rosa</option>
+               <option>Verde</option>
+             </select>
+           </div>
+
+       </div>
 
      </div>
 
-   </div>
+      <p></p>
 
-    <p></p>
+      <div class="row animated fadeIn fast">
+        <div class="col-md-1"></div>
+        <div class="col-md-5">
+            <a [routerLink]="['/products']" class="btn btn-success btn-block">Comprar</a>
+        </div>
+        <div class="col-md-5">
+            <a [routerLink]="['/products']" class="btn btn-outline-success btn-block">Agregar al carrito</a>
+        </div>
+        <div class="col-md-1"></div>
+      </div>
 
-    <div class="row animated fadeIn fast">
-      <div class="col-md-1"></div>
-      <div class="col-md-5">
-          <a [routerLink]="['/products']" class="btn btn-success btn-block">Comprar</a>
-      </div>
-      <div class="col-md-5">
-          <a [routerLink]="['/products']" class="btn btn-outline-success btn-block">Agregar al carrito</a>
-      </div>
-      <div class="col-md-1"></div>
+      <!-- <div>
+        <img *ngIf="product.casa=='Marvel'" src="/assets/img/marvel.png" class="logo" alt="">
+        <img *ngIf="product.casa=='DC'"     src="/assets/img/dc.png" class="logo" alt="">
+      </div> -->
     </div>
 
-    <!-- <div>
-      <img *ngIf="product.casa=='Marvel'" src="/assets/img/marvel.png" class="logo" alt="">
-      <img *ngIf="product.casa=='DC'"     src="/assets/img/dc.png" class="logo" alt="">
-    </div> -->
-  </div>
+    <div class="container">
+      <hr>
+      <h5>Características</h5>
+      <hr>
 
-  <div class="container">
-    <hr>
-    <h5>Características</h5>
-    <hr>
+      <div class="row animated fadeIn fast">
+        <div class="col-md-1">
+            <small class="text-muted">Tipo</small>
+        </div>
+        <div class="col-md-5">
+            <p>{{product.tipo}}</p>
+        </div>
 
-    <div class="row animated fadeIn fast">
-      <div class="col-md-1">
-          <small class="text-muted">Tipo</small>
-      </div>
-      <div class="col-md-5">
-          <p>{{product.tipo}}</p>
+        <div class="col-md-1">
+            <small class="text-muted">Color</small>
+        </div>
+        <div class="col-md-5">
+            <p>{{product.color}}</p>
+        </div>
       </div>
 
-      <div class="col-md-1">
-          <small class="text-muted">Color</small>
+      <div class="row animated fadeIn fast">
+        <div class="col-md-1">
+            <small class="text-muted">Temporada</small>
+        </div>
+        <div class="col-md-5">
+            <p>{{product.temporada}}</p>
+        </div>
+
+        <div class="col-md-1">
+            <small class="text-muted">Marca</small>
+        </div>
+        <div class="col-md-5">
+            <p>{{product.marca}}</p>
+        </div>
       </div>
-      <div class="col-md-5">
-          <p>{{product.color}}</p>
-      </div>
+
     </div>
 
-    <div class="row animated fadeIn fast">
-      <div class="col-md-1">
-          <small class="text-muted">Temporada</small>
-      </div>
-      <div class="col-md-5">
-          <p>{{product.temporada}}</p>
-      </div>
-
-      <div class="col-md-1">
-          <small class="text-muted">Marca</small>
-      </div>
-      <div class="col-md-5">
-          <p>{{product.marca}}</p>
-      </div>
+    <div class="container">
+      <hr>
+      <h5>Descripción</h5>
+      <hr>
+      <p>
+        {{product.descLarga}}
+      </p>
     </div>
 
-  </div>
+    <!-- <a [routerLink]="['/products']" class="btn btn-outline-success btn-block">Comprar</a> -->
 
-  <div class="container">
-    <hr>
-    <h5>Descripción</h5>
-    <hr>
-    <p>
-      {{product.descLarga}}
-    </p>
   </div>
-
-  <!-- <a [routerLink]="['/products']" class="btn btn-outline-success btn-block">Comprar</a> -->
 
 </div>
