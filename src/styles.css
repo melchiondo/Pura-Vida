@@ -3,7 +3,15 @@ body{
 }
 
 .main-container{
-  margin-top: 20px;
+  padding-top: 20px;
+}
+
+.margen-sup{
+  padding-top: 20px;
+}
+
+.margen-inf{
+  padding-bottom: 20px;
 }
 
 .home-desc{
@@ -16,7 +24,7 @@ body{
 
 .home-top{
   padding-bottom: 0px;
-  margin-top: 85px;
+  margin-top: 66px;
   margin-bottom: 0px;
   margin-right: 0px;
   margin-left: 0px;
@@ -53,6 +61,7 @@ body{
 
 .center{
   padding: 10px;
+
 }
 
 .logo{
@@ -62,6 +71,26 @@ body{
 body{
   background-repeat:no-repeat;
   background-size:cover;
+}
+
+#mapa{
+  height:156px;
+}
+
+#barra-contacto{
+  line-height: 100%   /*esta es la propiedad para el interlineado*/
+}
+
+#barra-redes{
+  height:100px;
+}
+
+#img-mapa{
+  border: 0;
+  margin: 0;
+  margin-top: 0px;
+  padding: 0;
+  width: 1200px;
 }
 
 /* Animaciones */
