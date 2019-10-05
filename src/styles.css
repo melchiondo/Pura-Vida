@@ -7,11 +7,11 @@ body{
 }
 
 .margen-sup{
-  padding-top: 20px;
+  padding-top: 10px;
 }
 
 .margen-inf{
-  padding-bottom: 20px;
+  padding-bottom: 10px;
 }
 
 .home-desc{
@@ -24,7 +24,7 @@ body{
 
 .home-top{
   padding-bottom: 0px;
-  margin-top: 66px;
+  margin-top: 0px;
   margin-bottom: 0px;
   margin-right: 0px;
   margin-left: 0px;
@@ -74,11 +74,11 @@ body{
 }
 
 #mapa{
-  height:156px;
+  height:210px;
 }
 
 #barra-contacto{
-  line-height: 100%   /*esta es la propiedad para el interlineado*/
+  line-height: 100%;   /*esta es la propiedad para el interlineado*/
 }
 
 #barra-redes{
@@ -90,7 +90,16 @@ body{
   margin: 0;
   margin-top: 0px;
   padding: 0;
-  width: 1200px;
+  width: 100%;
+  /* width: 1200px; */
+}
+
+#redes{
+  width: 100%;
+}
+
+#barra-final{
+  height:100px;
 }
 
 /* Animaciones */
