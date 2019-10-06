@@ -1,15 +1,22 @@
-<div class="container main-container">
+<!-- <div id=fondo-prods class="row">
+  <img id=img-prods src="assets/img/fondos/fondo-prods.jpg" alt="">
+</div> -->
+<div class="">
 
-  <h1 class="titulo">Productos</h1>
-  <hr>
+  <div class="container main-container">
 
-  <div class="card-columns">
+    <h3 class="titulo">Productos</h3>
+    <hr>
 
-    <app-tarjetaProducto
-      [prodTarjeta]="product"
-      [index]="i"
-      *ngFor="let product of products ; let i = index">
-    </app-tarjetaProducto>
+    <div class="card-columns">
+
+      <app-tarjetaProducto
+        [prodTarjeta]="product"
+        [index]="i"
+        *ngFor="let product of products ; let i = index">
+      </app-tarjetaProducto>
+
+    </div>
 
   </div>
 

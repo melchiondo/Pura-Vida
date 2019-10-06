@@ -1,11 +1,14 @@
-<div type="button" (click)="verProducto(index)"
-class="card animated fadeIn fast shadow p-3 mb-5 bg-white rounded">
+<div id=tarjeta type="button" (click)="verProducto(index)"
+class="card animated fadeIn fast shadow p-3 mb-5 rounded">
+
   <img src="{{prodTarjeta.imgPortada}}" class="card-img-top" alt="{{prodTarjeta.nombre}}">
+
   <div class="card-body">
     <h5 class="card-title">{{prodTarjeta.nombre}}</h5>
     <p class="card-text">{{prodTarjeta.descCorta}}</p>
-    <span *ngIf="prodTarjeta.moneda=='peso'" class="badge badge-primary">$ {{prodTarjeta.precio}}</span>
-    <span *ngIf="prodTarjeta.moneda=='dolar'" class="badge badge-primary">U$S {{prodTarjeta.precio}}</span>
+
+    <h5 *ngIf="prodTarjeta.moneda=='peso'" class="text-primary">$ {{prodTarjeta.precio}}</h5>
+    <h5 *ngIf="prodTarjeta.moneda=='dolar'" class="text-primary">U$S {{prodTarjeta.precio}}</h5>
 
     <p class="card-text"><small class="text-muted">{{prodTarjeta.temporada}}</small></p>
 
@@ -14,4 +17,5 @@ class="card animated fadeIn fast shadow p-3 mb-5 bg-white rounded">
 
     <!-- <a [routerLink]="['/productPage',i]" class="btn btn-outline-primary btn-block">Ver mas Link...</a> -->
   </div>
+
 </div>

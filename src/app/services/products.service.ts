@@ -7,6 +7,7 @@ export class ProductsService {
   [
       {
         nombre: "Bikini con volados",
+        categoria: "Bikinis",
         tipo: "Bikini 2 piezas",
         color: "Rojo",
         descCorta: "Bikini sin costura Amarilla con volados",
@@ -16,8 +17,64 @@ export class ProductsService {
         temporada: "Temporada 19/20",
         marca: "Pura Vida",
         precio: "420,00",
-        moneda: "peso"
-      }
+        moneda: "peso",
+      },
+      {
+        nombre: "Bikini con volados",
+        categoria: "Bikinis",
+        tipo: "Bikini 2 piezas",
+        color: "Rojo",
+        descCorta: "Bikini sin costura Amarilla con volados",
+        descLarga: "Esta Bikini sin costura Amarilla consta de dos finas piezas con volados perfecta para el calce",
+        imgPortada: "assets/img/productos/Malla2.jpeg",
+        imgLista: [],
+        temporada: "Temporada 19/20",
+        marca: "Pura Vida",
+        precio: "420,00",
+        moneda: "peso",
+      },
+      {
+        nombre: "Bikini con volados",
+        categoria: "Bikinis",
+        tipo: "Bikini 2 piezas",
+        color: "Rojo",
+        descCorta: "Bikini sin costura Amarilla con volados",
+        descLarga: "Esta Bikini sin costura Amarilla consta de dos finas piezas con volados perfecta para el calce",
+        imgPortada: "assets/img/productos/Malla3.jpeg",
+        imgLista: [],
+        temporada: "Temporada 19/20",
+        marca: "Pura Vida",
+        precio: "420,00",
+        moneda: "peso",
+      },
+      {
+        nombre: "Bikini con volados",
+        categoria: "Bikinis",
+        tipo: "Bikini 2 piezas",
+        color: "Rojo",
+        descCorta: "Bikini sin costura Amarilla con volados",
+        descLarga: "Esta Bikini sin costura Amarilla consta de dos finas piezas con volados perfecta para el calce",
+        imgPortada: "assets/img/productos/Malla4.jpeg",
+        imgLista: [],
+        temporada: "Temporada 19/20",
+        marca: "Pura Vida",
+        precio: "420,00",
+        moneda: "peso",
+      },
+      {
+        nombre: "Bikini con volados",
+        categoria: "Bikinis",
+        tipo: "Bikini 2 piezas",
+        color: "Rojo",
+        descCorta: "Bikini sin costura Amarilla con volados",
+        descLarga: "Esta Bikini sin costura Amarilla consta de dos finas piezas con volados perfecta para el calce",
+        imgPortada: "assets/img/productos/Malla5.jpeg",
+        imgLista: [],
+        temporada: "Temporada 19/20",
+        marca: "Pura Vida",
+        precio: "420,00",
+        moneda: "peso",
+      },
   ];
 
   constructor() {
@@ -58,6 +115,7 @@ export class ProductsService {
 
 export interface Product{
   nombre: string;
+  categoria: string;
   tipo: string;
   color: string;
   descCorta: string;

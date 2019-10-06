@@ -32,7 +32,7 @@ body{
 
 .titulo{
   padding-bottom: 0px;
-  margin-top: 100px;
+  margin-top: 60px;
   margin-bottom: 0px;
   margin-right: 0px;
   margin-left: 0px;
@@ -73,9 +73,6 @@ body{
   background-size:cover;
 }
 
-#mapa{
-  height:150px;
-}
 
 #barra-contacto{
   line-height: 100%;   /*esta es la propiedad para el interlineado*/
@@ -85,7 +82,24 @@ body{
   height:100px;
 }
 
+#mapa{
+  height:150px;
+}
+
 #img-mapa{
+  border: 0;
+  margin: 0;
+  margin-top: 0px;
+  padding: 0;
+  width: 100%;
+  /* width: 1200px; */
+}
+
+#fondo-prods{
+  height:0px;
+}
+
+#img-prods{
   border: 0;
   margin: 0;
   margin-top: 0px;
@@ -100,6 +114,14 @@ body{
 
 #barra-final{
   height:100px;
+}
+
+#tarjeta{
+  background-color:#cccccc;
+}
+
+#prods{
+  background-color:#999999
 }
 
 /* Animaciones */
