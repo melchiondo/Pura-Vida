@@ -19,8 +19,4 @@ export class ProductPageComponent {
     })
   }
 
-  // verProducto (idx:number){
-  //   this.router.navigate(['/productPage',idx]);
-  // }
-
 }

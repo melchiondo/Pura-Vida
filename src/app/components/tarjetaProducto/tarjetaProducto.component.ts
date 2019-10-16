@@ -17,8 +17,8 @@ export class TarjetaProductoComponent implements OnInit {
   ngOnInit() {
   }
 
-  verProducto (idx:number){
-    this.router.navigate(['/productPage',this.index]);
+  verProducto (id:string){
+    this.router.navigate(['/productPage',id]);
   }
 
 }

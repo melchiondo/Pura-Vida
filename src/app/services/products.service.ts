@@ -6,10 +6,11 @@ export class ProductsService {
   private products:Product[] =
   [
       {
-        nombre: "Bikini con volado",
+        id: "1",
+        nombre: "Bikini Punta Cana",
         categoria: "Bikinis",
         tipo: "Bikini 2 piezas",
-        color: "Amarillo",
+        colores: ["Amarillo"],
         descCorta: "Bikini sin costura Amarilla con volados por encima de la tasa",
         descLarga: "Esta Bikini sin costura amarilla consta de dos finas piezas con volados por encima de la tasa. Un conjunto perfecto para el calce, muy cómodo para el uso",
         imgPortada: "assets/img/productos/Malla1.jpeg",
@@ -20,10 +21,11 @@ export class ProductsService {
         moneda: "peso",
       },
       {
-        nombre: "Bikini con volado",
+        id: "2",
+        nombre: "Enteriza Barú",
         categoria: "Bikinis",
         tipo: "Bikini 2 piezas",
-        color: "Rosa",
+        colores: ["Negro"],
         descCorta: "Bikini sin costura Rosa con volados por debajo de la tasa",
         descLarga: "Esta Bikini sin costura rosa consta de dos finas piezas con volados por debajo de la tasa. Un conjunto perfecto para el calce, muy cómodo para el uso",
         imgPortada: "assets/img/productos/Malla2.jpeg",
@@ -34,10 +36,11 @@ export class ProductsService {
         moneda: "peso",
       },
       {
-        nombre: "Bikini con volados",
+        id: "3",
+        nombre: "Bikini Tulum",
         categoria: "Bikinis",
         tipo: "Bikini 2 piezas",
-        color: "Rojo",
+        colores: ["Rojo"],
         descCorta: "Bikini sin costura Amarilla con volados",
         descLarga: "Esta Bikini sin costura Amarilla consta de dos finas piezas con volados perfecta para el calce",
         imgPortada: "assets/img/productos/Malla3.jpeg",
@@ -48,10 +51,11 @@ export class ProductsService {
         moneda: "peso",
       },
       {
-        nombre: "Bikini con volados",
+        id: "4",
+        nombre: "Short",
         categoria: "Bikinis",
         tipo: "Bikini 2 piezas",
-        color: "Rojo",
+        colores: ["Rojo"],
         descCorta: "Bikini sin costura Amarilla con volados",
         descLarga: "Esta Bikini sin costura Amarilla consta de dos finas piezas con volados perfecta para el calce",
         imgPortada: "assets/img/productos/Malla4.jpeg",
@@ -62,10 +66,11 @@ export class ProductsService {
         moneda: "peso",
       },
       {
-        nombre: "Bikini con volados",
+        id: "5",
+        nombre: "Bikini Varadero",
         categoria: "Bikinis",
         tipo: "Bikini 2 piezas",
-        color: "Rojo",
+        colores: ["Rojo"],
         descCorta: "Bikini sin costura Amarilla con volados",
         descLarga: "Esta Bikini sin costura Amarilla consta de dos finas piezas con volados perfecta para el calce",
         imgPortada: "assets/img/productos/Malla5.jpeg",
@@ -76,10 +81,11 @@ export class ProductsService {
         moneda: "peso",
       },
       {
-        nombre: "Bikini con volados",
+        id: "6",
+        nombre: "Bikini Copacabana",
         categoria: "Bikinis",
         tipo: "Bikini 2 piezas",
-        color: "Rojo",
+        colores: ["Rojo"],
         descCorta: "Bikini sin costura Amarilla con volados",
         descLarga: "Esta Bikini sin costura Amarilla consta de dos finas piezas con volados perfecta para el calce",
         imgPortada: "assets/img/productos/nueva1.jpg",
@@ -90,10 +96,11 @@ export class ProductsService {
         moneda: "peso",
       },
       {
-        nombre: "Bikini con volados",
+        id: "7",
+        nombre: "Bikini Buzios",
         categoria: "Bikinis",
         tipo: "Bikini 2 piezas",
-        color: "Rojo",
+        colores: ["Rojo"],
         descCorta: "Bikini sin costura Amarilla con volados",
         descLarga: "Esta Bikini sin costura Amarilla consta de dos finas piezas con volados perfecta para el calce",
         imgPortada: "assets/img/productos/nueva2.jpg",
@@ -104,10 +111,11 @@ export class ProductsService {
         moneda: "peso",
       },
       {
-        nombre: "Bikini con volados",
+        id: "8",
+        nombre: "Bikini Cartagena",
         categoria: "Bikinis",
         tipo: "Bikini 2 piezas",
-        color: "Rojo",
+        colores: ["Rojo"],
         descCorta: "Bikini sin costura Amarilla con volados",
         descLarga: "Esta Bikini sin costura Amarilla consta de dos finas piezas con volados perfecta para el calce",
         imgPortada: "assets/img/productos/nueva3.jpg",
@@ -118,10 +126,11 @@ export class ProductsService {
         moneda: "peso",
       },
       {
-        nombre: "Bikini con volados",
+        id: "9",
+        nombre: "Bikini Bora Bora",
         categoria: "Bikinis",
         tipo: "Bikini 2 piezas",
-        color: "Rojo",
+        colores: ["Rojo"],
         descCorta: "Bikini sin costura Amarilla con volados",
         descLarga: "Esta Bikini sin costura Amarilla consta de dos finas piezas con volados perfecta para el calce",
         imgPortada: "assets/img/productos/nueva4.jpg",
@@ -132,10 +141,11 @@ export class ProductsService {
         moneda: "peso",
       },
       {
-        nombre: "Bikini con volados",
+        id: "10",
+        nombre: "Bikini San Andrés",
         categoria: "Bikinis",
         tipo: "Bikini 2 piezas",
-        color: "Rojo",
+        colores: ["Rojo"],
         descCorta: "Bikini sin costura Amarilla con volados",
         descLarga: "Esta Bikini sin costura Amarilla consta de dos finas piezas con volados perfecta para el calce",
         imgPortada: "assets/img/productos/nueva5.jpg",
@@ -155,8 +165,12 @@ export class ProductsService {
     return this.products;
   }
 
-  getProduct( idx:number ):Product{
-    return this.products[idx];
+  getProduct( id:string ):Product{
+    for(let product of this.products){
+      if(product.id == id){
+        return product;
+      }
+    }
   }
 
   getProductSearched( nom:string ):Product{
@@ -184,10 +198,11 @@ export class ProductsService {
 }
 
 export interface Product{
+  id: string;
   nombre: string;
   categoria: string;
   tipo: string;
-  color: string;
+  colores: string[];
   descCorta: string;
   descLarga: string;
   imgPortada: string;
