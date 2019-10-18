@@ -60,7 +60,7 @@
       <h1 *ngIf="product.moneda=='dolar'">U$S {{product.precio}}</h1>
     </div>
 
-     <div class="row animated fadeIn fast">
+    <div class="row animated fadeIn fast">
 
        <div class="row animated fadeIn fast">
 
@@ -84,9 +84,7 @@
 
            <div class="col-md-3">Color
              <select class="form-control" id="exampleFormControlSelect1">
-               <option>Negro</option>
-               <option>Rosa</option>
-               <option>Verde</option>
+               <option *ngFor="let color of product.colores">{{color}}</option>
              </select>
            </div>
 
@@ -107,10 +105,6 @@
         <div class="col-md-1"></div>
       </div>
 
-      <!-- <div>
-        <img *ngIf="product.casa=='Marvel'" src="/assets/img/marvel.png" class="logo" alt="">
-        <img *ngIf="product.casa=='DC'"     src="/assets/img/dc.png" class="logo" alt="">
-      </div> -->
     </div>
 
     <div class="container">
