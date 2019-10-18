@@ -1,0 +1,107 @@
+<div class="container main-container">
+
+  <div class="row titulo animated fadeIn fast">
+    <div class="col-md-2">
+      <a class="align-left btn btn-danger btn-block text-white" (click)="volverProducto(product.id)">Regresar</a>
+    </div>
+  </div>
+
+  <p></p>
+
+  <div class="row animated fadeIn fast shadow p-3 mb-5 bg-white rounded">
+    <div class="container">
+      <h6> Confirmación de compra</h6>
+      <hr>
+    </div>
+
+    <div class="col-md-5">
+
+      <div class="row">
+        <div class="col-md-4">
+          <img id=buy-image src="{{product.imgPortada}}" class="img-fluid" alt="{{product.descCorta}}">
+        </div>
+
+        <div class="col-md-8">
+          <div id=descr-buyProd>
+            <h5>{{product.nombre}} </h5>
+            <small><p>{{product.temporada}}</p></small>
+          </div>
+          <p>{{product.descCorta}}</p>
+        </div>
+
+        <div class="table-responsive">
+          <table class="table">
+            <tr>
+              <td>Cantidad</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>Talle</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>Color</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <a class="align-center btn btn-primary text-white" (click)="volverProducto(product.id)">Modificar selección</a>
+            </tr>
+          </table>
+        </div>
+
+
+        <div class="container text-success text-center">
+          <h5 *ngIf="product.moneda=='peso'">TOTAL : <small>{{product.nombre}} X 1 :</small> ${{product.precio}}</h5>
+          <h5 *ngIf="product.moneda=='dolar'">TOTAL : <small>{{product.nombre}} X 1 :</small> U$S{{product.precio}}</h5>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="col-md-7 verticalLine">
+
+      <div class="card animated fadeIn fast rounded">
+
+        <div class="card-body">
+          <h5 class="card-title">El próximo paso es ponernos en contacto para validar stock y pactar el envío</h5>
+          <!-- <p class="card-text">{{prodTarjeta.descCorta}}</p> -->
+
+          <div class="row">
+
+            <div class="text-center col-md-6">
+              <br><br>
+              <img src="assets/img/icons/phone2.png" class="w-25" alt="...">
+              <br><br>
+              <h5 class="font-weight-bold">TELÉFONO</h5>
+              <p>Comunicate  para concretar la compra</p>
+              <h6 class="font-weight-bold">Cel: 1167418722</h6>
+              <br><br>
+            </div>
+
+            <div class="text-center col-md-6">
+              <br><br>
+              <img src="assets/img/icons/mail2.png" class="w-25" alt="...">
+              <br><br>
+              <h5 class="font-weight-bold">MAIL</h5>
+              <p>Escribinos para concretar la compra</p>
+              <h6 class="font-weight-bold">pau_moru@hotmail.com</h6>
+              <br><br>
+            </div>
+          </div>
+
+          <div class="row animated fadeIn fast">
+            <div class="col-md-5">
+                <a class="btn btn-success btn-block" (click)="comprarProducto(product.id)">Comprar</a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

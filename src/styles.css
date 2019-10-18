@@ -78,6 +78,14 @@ body{
   line-height: 100%;   /*esta es la propiedad para el interlineado*/
 }
 
+#descr-buyProd{
+  line-height: 40%;   /*esta es la propiedad para el interlineado*/
+}
+
+.verticalLine {
+  border-left: solid #cccccc;
+}
+
 #barra-redes{
   height:100px;
 }
@@ -88,6 +96,10 @@ body{
 
 #ingresar{
   height:100px;
+}
+
+#buy-image{
+  width: 100%
 }
 
 #img-mapa{
@@ -125,7 +137,7 @@ body{
 }
 
 #prods{
-  background-color:#999999
+  background-color:#999999;
 }
 
 /* Animaciones */
