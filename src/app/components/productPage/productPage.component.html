@@ -47,7 +47,6 @@
         </a>
       </div>
 
-
       <br><br>
     </div>
 
@@ -130,9 +129,15 @@
         <div class="col-md-1">
             <small class="text-muted">Color</small>
         </div>
-        <div class="col-md-5">
-            <p>{{product.color}}</p>
+
+        <div id=lista-colores class="col-md-5">
+          <p>
+            <a *ngFor="let color of product.colores">
+              {{color}},
+            </a>
+          </p>
         </div>
+
       </div>
 
       <div class="row animated fadeIn fast">
