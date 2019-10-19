@@ -10,7 +10,7 @@ export class HomeComponent {
   product:any = {};
 
   constructor(private _productsService:ProductsService) {
-    this.product = this._productsService.getProduct(0);
+    // this.product = this._productsService.getProduct(0);
   }
 
 
