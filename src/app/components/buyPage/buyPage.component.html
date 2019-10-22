@@ -10,7 +10,7 @@
 
   <div class="row animated fadeIn fast shadow p-3 mb-5 bg-white rounded">
     <div class="container">
-      <h6> Confirmación de compra</h6>
+      <h6> Avancemos con la compra!</h6>
       <hr>
     </div>
 
@@ -33,15 +33,15 @@
           <table class="table">
             <tr>
               <td>Cantidad</td>
-              <td>1</td>
+              <td>{{cantidad}}</td>
             </tr>
             <tr>
               <td>Talle</td>
-              <td>1</td>
+              <td>{{talle}}</td>
             </tr>
             <tr>
               <td>Color</td>
-              <td>1</td>
+              <td>{{color}}</td>
             </tr>
             <tr>
               <a class="align-center btn btn-primary text-white" (click)="volverProducto(product.id)">Modificar selección</a>
@@ -51,8 +51,8 @@
 
 
         <div class="container text-success text-center">
-          <h5 *ngIf="product.moneda=='peso'">TOTAL : <small>{{product.nombre}} X 1 :</small> ${{product.precio}}</h5>
-          <h5 *ngIf="product.moneda=='dolar'">TOTAL : <small>{{product.nombre}} X 1 :</small> U$S{{product.precio}}</h5>
+          <h5 *ngIf="product.moneda=='peso'" >TOTAL : <small>{{product.nombre}} X {{cantidad}} :</small> $  {{total}}</h5>
+          <h5 *ngIf="product.moneda=='dolar'">TOTAL : <small>{{product.nombre}} X {{cantidad}} :</small> U$S{{total}}</h5>
         </div>
 
       </div>

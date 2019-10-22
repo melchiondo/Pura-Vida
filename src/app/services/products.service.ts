@@ -17,7 +17,7 @@ export class ProductsService {
         imgLista: ["assets/img/productos/f1.jpeg","assets/img/productos/f2.jpeg"],
         temporada: "Temporada 2020",
         marca: "Pura Vida",
-        precio: "700,00",
+        precio: "700.00",
         moneda: "peso",
       },
       {
@@ -32,7 +32,7 @@ export class ProductsService {
         imgLista: ["assets/img/productos/f10.jpeg"],
         temporada: "Temporada 2020",
         marca: "Pura Vida",
-        precio: "800,00",
+        precio: "800.00",
         moneda: "peso",
       },
       {
@@ -47,7 +47,7 @@ export class ProductsService {
         imgLista: ["assets/img/productos/f3.jpeg","assets/img/productos/f8.jpeg"],
         temporada: "Temporada 2020",
         marca: "Pura Vida",
-        precio: "700,00",
+        precio: "700.00",
         moneda: "peso",
       },
       {
@@ -62,7 +62,7 @@ export class ProductsService {
         imgLista: [],
         temporada: "Temporada 2020",
         marca: "Pura Vida",
-        precio: "350,00",
+        precio: "350.00",
         moneda: "peso",
       },
       {
@@ -77,7 +77,7 @@ export class ProductsService {
         imgLista: ["assets/img/productos/f5.jpeg","assets/img/productos/f6.jpeg"],
         temporada: "Temporada 2020",
         marca: "Pura Vida",
-        precio: "650,00",
+        precio: "650.00",
         moneda: "peso",
       },
       // {
@@ -107,7 +107,7 @@ export class ProductsService {
         imgLista: [],
         temporada: "Temporada 2020",
         marca: "Pura Vida",
-        precio: "650,00",
+        precio: "650.00",
         moneda: "peso",
       },
       {
@@ -122,7 +122,7 @@ export class ProductsService {
         imgLista: [],
         temporada: "Temporada 2020",
         marca: "Pura Vida",
-        precio: "650,00",
+        precio: "650.00",
         moneda: "peso",
       },
       {
@@ -137,7 +137,7 @@ export class ProductsService {
         imgLista: [],
         temporada: "Temporada 2020",
         marca: "Pura Vida",
-        precio: "450,00",
+        precio: "450.00",
         moneda: "peso",
       },
       {
@@ -152,7 +152,7 @@ export class ProductsService {
         imgLista: [],
         temporada: "Temporada 2020",
         marca: "Pura Vida",
-        precio: "700,00",
+        precio: "700.00",
         moneda: "peso",
       },
   ];

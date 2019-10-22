@@ -22,7 +22,11 @@ export class ProductPageComponent {
   }
 
   comprarProducto (idx:number){
-    this.router.navigate(['/buyPage',idx]);
+    var cant = (<HTMLSelectElement>document.getElementById('buyPageCantidad')).value;
+    var talle = (<HTMLSelectElement>document.getElementById('buyPageTalle')).value;
+    var color = (<HTMLSelectElement>document.getElementById('buyPageColor')).value;
+    var params = idx + "-" + cant + "-" + talle + "-" + color ;
+    this.router.navigate(['/buyPage',params]);
   }
 
 }

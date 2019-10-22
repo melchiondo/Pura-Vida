@@ -11,14 +11,26 @@ import { ProductsService } from '../../services/products.service';
 export class BuyPageComponent implements OnInit {
 
   product:any = {};
+  private keyProd:string;
+  private cantidad:string;
+  private talle:string;
+  private color:string;
+  private par:string;
+  private total:number;
 
   constructor(private activatedRoute:ActivatedRoute,
               private _productsService:ProductsService,
               private router:Router,
   ) {
       this.activatedRoute.params.subscribe( params=> {
-      this.product = this._productsService.getProduct(params['id']);
-      console.log(this.product);
+      var str = params['id']; //asigna parametros
+      var splitted = str.split("-", 4); //separa parametros por guiones
+      this.keyProd = splitted[0];
+      this.cantidad = splitted[1];
+      this.talle = splitted[2];
+      this.color = splitted[3];
+      this.product = this._productsService.getProduct(this.keyProd);
+      this.total = Number(this.cantidad) * this.product.precio;
     })
   }
 
