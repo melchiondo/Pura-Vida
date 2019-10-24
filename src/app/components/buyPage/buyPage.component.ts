@@ -38,7 +38,8 @@ export class BuyPageComponent implements OnInit {
   }
 
   volverProducto (idx:number){
-    this.router.navigate(['/productPage',idx]);
+    var params = idx + "-" + this.cantidad + "-" + this.talle + "-" + this.color ;
+    this.router.navigate(['/productPage',params]);
   }
 
 }
