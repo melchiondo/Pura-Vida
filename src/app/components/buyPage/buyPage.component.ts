@@ -17,6 +17,7 @@ export class BuyPageComponent implements OnInit {
   private color:string;
   private par:string;
   private total:number;
+  public buyWhatsappURL:string = "https://api.whatsapp.com/send?phone=5491167418722&text=Hola!%20Me%20interesa%20";
 
   constructor(private activatedRoute:ActivatedRoute,
               private _productsService:ProductsService,
@@ -31,6 +32,8 @@ export class BuyPageComponent implements OnInit {
       this.color = splitted[3];
       this.product = this._productsService.getProduct(this.keyProd);
       this.total = Number(this.cantidad) * this.product.precio;
+      var s:string = "%20";
+      this.buyWhatsappURL += this.product.nombre + "," + s + "cantidad:" + s + this.cantidad + "," + s + "talle:" + s + this.talle + "," + s + "color:" + s + this.color;
     })
   }
 
