@@ -43,9 +43,7 @@
               <td>Color</td>
               <td>{{color}}</td>
             </tr>
-            <tr>
-              <a class="align-center btn btn-primary text-white" (click)="volverProducto(product.id)">Modificar selección</a>
-            </tr>
+            <a class="btn btn-primary text-white" style="float: right;" (click)="volverProducto(product.id)">Modificar selección</a>
           </table>
         </div>
 
@@ -63,42 +61,61 @@
 
       <div id=tarjeta class="card animated fadeIn fast rounded">
 
-        <div class="card-body">
-          <h5 class="card-title">El próximo paso es ponernos en contacto para validar stock y pactar el envío</h5>
+        <div class="card-body" >
+          <h6 class="card-title">El próximo paso es ponernos en contacto para validar stock y pactar el envío. Comunicate!:</h6>
           <!-- <p class="card-text">{{prodTarjeta.descCorta}}</p> -->
 
           <div class="row">
 
-            <div class="text-center col-md-6">
-              <br><br>
-              <img src="assets/img/icons/phone2.png" class="w-25" alt="...">
-              <br><br>
-              <h5 class="font-weight-bold">Teléfono</h5>
-              <p>Llamanos!</p>
-              <h6 class="font-weight-bold">Cel: 1167418722</h6>
-              <br><br>
-            </div>
-
-            <div class="text-center col-md-6">
+            <div id=descr-buyProd class="text-center col-md-6">
               <br><br>
               <!-- <img src="assets/img/icons/mail2.png" class="w-25" alt="..."> -->
               <img src="assets/img/redes/whatsapp.png" class="w-25" alt="...">
               <br><br>
               <h5 class="font-weight-bold">Whatsapp</h5>
-              <p>Escribinos!</p>
-              <h6 class="font-weight-bold">pau_moru@hotmail.com</h6>
+              <p>Hacé click!</p>
+              <!-- <h6 class="font-weight-bold">pau_moru@hotmail.com</h6> -->
+              <br><br>
+            </div>
+
+            <div id=descr-buyProd class="text-center col-md-6">
+              <br><br>
+              <img src="assets/img/icons/phone2.png" class="w-25" alt="...">
+              <br><br>
+              <h5 class="font-weight-bold">Teléfono</h5>
+              <p>Cel: 1167418722</p>
+              <!-- <h6 class="font-weight-bold">Cel: 1167418722</h6> -->
               <br><br>
             </div>
 
           </div>
 
-          <!-- <div class="row animated fadeIn fast">
-            <div class="col-md-5">
-                <a class="btn btn-success btn-block" (click)="comprarProducto(product.id)">Comprar</a>
+          <hr>
+
+          <div class="row">
+            <div class="col-md-2">
+              <img src="assets/img/buyPage/pago.png" width="40" height="40" alt="...">
             </div>
-          </div> -->
+            <div class="col-md-10">
+              <h6 class="card-title">El pago podrás hacerlo en efectivo o electrónicamente al siguiente alias bancario: <strong>PURA_VIDA_WEB2020</strong></h6>
+            </div>
+          </div>
+
+          <hr>
+
+          <div class="row">
+            <div class="col-md-2">
+              <img src="assets/img/buyPage/envio.png" width="50" height="40" alt="...">
+            </div>
+            <div class="col-md-10">
+              <h6 class="card-title">Consultá tambien por envíos a domicilio</h6>
+            </div>
+          </div>
+
+
 
         </div>
+
 
       </div>
 
