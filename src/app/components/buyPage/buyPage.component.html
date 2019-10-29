@@ -2,8 +2,10 @@
 
   <div class="row titulo animated fadeIn fast">
     <div class="col-md-2">
-      <a class="align-left btn btn-danger btn-block text-white fas fa-arrow-left"
-        (click)="volverProducto(product.id)"> Regresar</a>
+      <a class="align-left btn btn-danger btn-block text-white"
+        (click)="volverProducto(product.id)">
+        <i class="fas fa-arrow-left"></i> Regresar
+      </a>
     </div>
   </div>
 
@@ -11,7 +13,7 @@
 
   <div class="row animated fadeIn fast shadow p-3 mb-5 bg-white rounded">
     <div class="container">
-      <h6> Avancemos con la compra!</h6>
+      <h5> Avancemos con la compra!</h5>
       <hr>
     </div>
 
@@ -44,15 +46,19 @@
               <td>Color</td>
               <td>{{color}}</td>
             </tr>
-            <a class="btn btn-primary text-white fas fa-edit" style="float: right;"
-              (click)="volverProducto(product.id)"> Modificar selección</a>
+            <a class="btn btn-primary text-white" style="float: right;"
+              (click)="volverProducto(product.id)">
+              <i class="fas fa-edit"></i>  Modificar selección
+            </a>
           </table>
         </div>
 
 
         <div class="container text-success text-center">
+          <hr>
           <h5 *ngIf="product.moneda=='peso'" >TOTAL : <small>{{product.nombre}} X {{cantidad}} :</small> $  {{total}}</h5>
           <h5 *ngIf="product.moneda=='dolar'">TOTAL : <small>{{product.nombre}} X {{cantidad}} :</small> U$S{{total}}</h5>
+          <hr>
         </div>
 
       </div>
