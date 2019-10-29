@@ -3,27 +3,38 @@
 </div> -->
 <div class="">
 
-  <div class="container main-container">
-
-    <h3 class="titulo">Productos</h3>
-    <hr>
-<!-- 
-    <div id=boton-wapp class="btn-whatsapp fixed-bottom">
-      <a href="https://api.whatsapp.com/send?phone=5491167418722&text=Hola!%20Me%20interesan%20los%20productos!" target="_blank">
-        <img class="float-right" src="http://s2.accesoperu.com/logos/btn_whatsapp.png" alt="">
-      </a>
-    </div> -->
-
-    <div class="card-columns">
-
-      <app-tarjetaProducto
-        [prodTarjeta]="product"
-        [index]="i"
-        *ngFor="let product of products ; let i = index">
-      </app-tarjetaProducto>
-
+    <div class="jumbotron titulo">
+      <div id=tituProd>
+        <h1 class="display-4">Productos</h1>
+        <!-- <p class="lead">Esta es nuestra oferta, no dudes en consultarnos.</p> -->
+        <hr class="my-4">
+      </div>
     </div>
 
-  </div>
+    <div class="row">
+
+      <div id=filtros class="col-md-2">
+        <app-filterNav></app-filterNav>
+      </div>
+
+      <div class="col-md-8">
+
+        <div class="container main-container">
+          <h6>{{products.length}} productos encontrados</h6>
+          <hr>
+        </div>
+
+        <div class="card-columns">
+            <app-tarjetaProducto
+            [prodTarjeta]="product"
+            [index]="i"
+            *ngFor="let product of products ; let i = index">
+          </app-tarjetaProducto>
+        </div>
+      </div>
+
+      <div class="col-md-1"></div>
+
+    </div>
 
 </div>

@@ -205,6 +205,16 @@ export class ProductsService {
     return productsArray;
   }
 
+  getCategorias() :String[]{
+    let categArray:String[] = [];
+    for(let product of this.products){
+      if(categArray.indexOf(product.categoria)){
+        categArray.push(product.categoria);
+      }
+    }
+    return categArray;
+  }
+
 }
 
 export interface Product{

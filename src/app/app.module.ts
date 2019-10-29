@@ -20,6 +20,7 @@ import { ProductPageSearchComponent } from './components/productPageSearch/produ
 import { TarjetaProductoComponent } from './components/tarjetaProducto/tarjetaProducto.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { BuyPageComponent } from './components/buyPage/buyPage.component';
+import { FilterNavComponent } from './components/shared/filterNav/filterNav.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { BuyPageComponent } from './components/buyPage/buyPage.component';
     ProductPageSearchComponent,
     TarjetaProductoComponent,
     FooterComponent,
-    BuyPageComponent
+    BuyPageComponent,
+    FilterNavComponent
   ],
   imports: [
     BrowserModule,

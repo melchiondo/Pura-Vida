@@ -158,6 +158,19 @@ body{
   margin-top: 0px;
 }
 
+#filtros{
+  /* margin-top: 72px; */
+  margin-left: 60px;
+  margin-right: 30px;
+}
+
+#tituProd{
+  /* margin-top: 72px; */
+  margin-left: 30px;
+}
+
+
+
 /* Animaciones */
 
 .animated {
