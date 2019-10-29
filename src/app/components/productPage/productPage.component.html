@@ -62,14 +62,17 @@
       <h1 *ngIf="product.moneda=='dolar'">U$S {{product.precio}}</h1>
     </div>
 
+    <hr>
+
     <div class="row animated fadeIn fast">
 
        <div class="row animated fadeIn fast">
 
-           <div class="col-md-1"></div>
+         <div class="col-md-3"></div>
+
 
            <div class="col-md-3">Cantidad
-             <select class="form-control" id="buyPageCantidad">
+             <select class="custom-select mr-sm-2" id="buyPageCantidad">
                <option *ngIf="cantidad > ''" selected>{{cantidad}}</option>
                <option>1</option>
                <option>2</option>
@@ -80,7 +83,7 @@
            </div>
 
            <div class="col-md-3">Talle
-             <select class="form-control" id="buyPageTalle">
+             <select class="custom-select mr-sm-2" id="buyPageTalle">
                <option *ngIf="talle > ''" selected>{{talle}}</option>
                <option>80</option>
                <option>85</option>
@@ -89,7 +92,7 @@
            </div>
 
            <div class="col-md-3">Color
-             <select class="form-control" id="buyPageColor">
+             <select class="custom-select mr-sm-2" id="buyPageColor">
                <option *ngIf="color > ''" selected>{{color}}</option>
                <option *ngFor="let color of product.colores">{{color}}</option>
              </select>
@@ -98,6 +101,8 @@
        </div>
 
      </div>
+
+      <hr>
 
       <p></p>
 
