@@ -145,6 +145,10 @@ body{
   margin-right: 30px;
 }
 
+.margenBoton{
+  margin-bottom: 5px;
+}
+
 /* Animaciones */
 
 .animated {

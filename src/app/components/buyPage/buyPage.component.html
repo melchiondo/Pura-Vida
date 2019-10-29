@@ -2,7 +2,8 @@
 
   <div class="row titulo animated fadeIn fast">
     <div class="col-md-2">
-      <a class="align-left btn btn-danger btn-block text-white" (click)="volverProducto(product.id)">Regresar</a>
+      <a class="align-left btn btn-danger btn-block text-white fas fa-arrow-left"
+        (click)="volverProducto(product.id)"> Regresar</a>
     </div>
   </div>
 
@@ -43,7 +44,8 @@
               <td>Color</td>
               <td>{{color}}</td>
             </tr>
-            <a class="btn btn-primary text-white" style="float: right;" (click)="volverProducto(product.id)">Modificar selección</a>
+            <a class="btn btn-primary text-white fas fa-edit" style="float: right;"
+              (click)="volverProducto(product.id)"> Modificar selección</a>
           </table>
         </div>
 
@@ -93,23 +95,22 @@
           </div>
 
           <hr>
+          <hr>
 
           <div class="row">
-            <div class="col-md-2">
-              <img src="assets/img/buyPage/pago.png" width="40" height="40" alt="...">
-            </div>
-            <div class="col-md-10">
-              <h6 class="card-title">El pago podrás hacerlo en efectivo o electrónicamente al siguiente alias bancario: <strong>PURA.VIDA.WEB2020</strong></h6>
+            <div class="col-md-1"></div>
+            <div class="col-md-1 far fa-credit-card fa-2x"></div>
+            <div class="col-md-9">
+              <h6 class="card-title">El pago podrás hacerlo en efectivo al momento de la entrega o también mediante transferencia bancaria.</h6>
             </div>
           </div>
 
           <hr>
 
           <div class="row">
-            <div class="col-md-2">
-              <img src="assets/img/buyPage/envio.png" width="50" height="40" alt="...">
-            </div>
-            <div class="col-md-10">
+            <div class="col-md-1"></div>
+            <div class="col-md-1 fas fa-shipping-fast fa-2x"></div>
+            <div class="col-md-9">
               <h6 class="card-title">Consultá tambien por envíos a domicilio</h6>
             </div>
           </div>

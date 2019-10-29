@@ -10,10 +10,11 @@ import { ProductsService } from '../../services/products.service';
 export class ProductPageComponent {
 
   product:any = {};
-  private keyProd:string;
-  private cantidad:string;
-  private talle:string;
-  private color:string;
+  public keyProd:string;
+  public cantidad:string;
+  public talle:string;
+  public color:string;
+  public whatsappShare:string = "whatsapp://send?text=Hola!%20Mirá%20que%20bueno%20:%20http://www.puravida-web.com/#/productPage/"
 
   constructor( private activatedRoute:ActivatedRoute,
                private _productsService:ProductsService,
@@ -27,6 +28,7 @@ export class ProductPageComponent {
       this.talle = splitted[2];
       this.color = splitted[3];
       this.product = this._productsService.getProduct(this.keyProd);
+      this.whatsappShare += this.keyProd;
     })
   }
 

@@ -1,8 +1,8 @@
 <div class="container main-container">
 
-  <div class="row titulo animated fadeIn fast">
+  <div class="row titulo animated fadeIn fast ">
     <div class="col-md-2">
-      <a [routerLink]="['/products']" class="align-left btn btn-danger btn-block">Regresar</a>
+      <a [routerLink]="['/products']" class="align-left btn btn-danger btn-block fas fa-arrow-left"> Regresar</a>
     </div>
   </div>
 
@@ -101,12 +101,18 @@
 
       <div class="row animated fadeIn fast">
         <div class="col-md-1"></div>
+
         <div class="col-md-5">
-            <a class="btn btn-success btn-block text-white" (click)="comprarProducto(product.id)">Comprar</a>
+            <a class="btn btn-success btn-block text-white margenBoton far fa-check-circle"
+              (click)="comprarProducto(product.id)"> Lo quiero!</a>
         </div>
+
         <div class="col-md-5">
-            <a [routerLink]="['/products']" class="btn btn-outline-success btn-block">Agregar al carrito</a>
+            <a class="btn btn-outline-success btn-block margenBoton fas fa-share-alt"
+               href={{whatsappShare}} data-action="share/whatsapp/share"> Compartir
+            </a>
         </div>
+
         <div class="col-md-1"></div>
       </div>
 

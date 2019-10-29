@@ -11,12 +11,12 @@ import { ProductsService } from '../../services/products.service';
 export class BuyPageComponent implements OnInit {
 
   product:any = {};
-  private keyProd:string;
-  private cantidad:string;
-  private talle:string;
-  private color:string;
-  private par:string;
-  private total:number;
+  public keyProd:string;
+  public cantidad:string;
+  public talle:string;
+  public color:string;
+  public par:string;
+  public total:number;
   public buyWhatsappURL:string = "https://api.whatsapp.com/send?phone=5491167418722&text=Hola!%20Me%20interesa%20";
 
   constructor(private activatedRoute:ActivatedRoute,

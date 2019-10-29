@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 // Routes
 import { APP_ROUTING } from './app.routes';
@@ -36,6 +37,7 @@ import { BuyPageComponent } from './components/buyPage/buyPage.component';
   ],
   imports: [
     BrowserModule,
+    MDBBootstrapModule.forRoot(),
     APP_ROUTING
   ],
   providers: [

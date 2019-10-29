@@ -186,9 +186,19 @@ export class ProductsService {
   buscarProductos( termino:string) :Product[]{
     let productsArray:Product[] = [];
     termino = termino.toLowerCase();
+
     for(let product of this.products){
-      let prod = product.nombre.toLowerCase();
-      if(prod.indexOf(termino) >= 0){
+      let nom = product.nombre.toLowerCase();
+      let cat = product.categoria.toLowerCase();
+      let tip = product.tipo.toLowerCase();
+      let dec = product.descCorta.toLowerCase();
+      let del = product.descLarga.toLowerCase();
+
+      if(nom.indexOf(termino) >= 0
+      || cat.indexOf(termino) >= 0
+      || tip.indexOf(termino) >= 0
+      || dec.indexOf(termino) >= 0
+      || del.indexOf(termino) >= 0){
         productsArray.push(product);
       }
     }
