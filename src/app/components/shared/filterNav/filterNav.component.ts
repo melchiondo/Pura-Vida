@@ -10,6 +10,7 @@ export class FilterNavComponent implements OnInit {
 
   products:Product[] = [];
   tipoProds:String[] = [];
+  filterTipoProd:String;
 
   constructor(private _productsService:ProductsService,
   ) { }
@@ -18,6 +19,5 @@ export class FilterNavComponent implements OnInit {
     this.products = this._productsService.getProducts();
     this.tipoProds = this._productsService.getCategorias();
   }
-
 
 }
