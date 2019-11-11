@@ -1,24 +1,39 @@
-<div class="container main-container">
+<div class="">
 
-  <h1 class="titulo">Productos Encontrados</h1>
-  <hr>
-
-  <div class="home-desc row animated fadeIn fast" *ngIf="productosEncontrados.length == 0">
-    <div class="col-md-12">
-      <div class="alert alert-info" role="alert">
-        No existen resultados para el producto: "{{termino}}"
+    <div class="jumbotron titulo" *ngIf="productosEncontrados.length > 0">
+      <div id=tituProd>
+        <h1 class="display-4">Productos encontrados con: {{termino}}</h1>
+        <!-- <p class="lead">Esta es nuestra oferta, no dudes en consultarnos.</p> -->
+        <hr class="my-4">
       </div>
     </div>
-  </div>
 
-  <div class="card-columns">
+    <div class="container main-container">
 
-    <app-tarjetaProducto
-      [prodTarjeta]="product"
-      [index]="i"
-      *ngFor="let product of productosEncontrados ; let i = index">
-    </app-tarjetaProducto>
+      <div class="container main-container" *ngIf="productosEncontrados.length > 0">
+        <h6>{{productosEncontrados.length}} productos encontrados</h6>
+        <hr>
+      </div>
 
-  </div>
+      <div class="home-desc row animated fadeIn fast color-notfound" *ngIf="productosEncontrados.length == 0">
+        <div class="col-md-12 text-center">
+          <i class="fas fa-exclamation-triangle fa-5x image-margin"></i>
+          <div class="">
+            No existen resultados para el producto: "{{termino}}"
+          </div>
+        </div>
+      </div>
+
+      <div class="card-columns">
+
+        <app-tarjetaProducto
+          [prodTarjeta]="product"
+          [index]="i"
+          *ngFor="let product of productosEncontrados ; let i = index">
+        </app-tarjetaProducto>
+
+      </div>
+
+    </div>
 
 </div>
