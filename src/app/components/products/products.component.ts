@@ -12,7 +12,9 @@ export class ProductsComponent implements OnInit {
 
   constructor( private _productsService:ProductsService,
                private router:Router
-  ) {}
+  ) {
+    window.scroll(0, 0);
+  }
 
   ngOnInit() {
     this.products = this._productsService.getProducts();

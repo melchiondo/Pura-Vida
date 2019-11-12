@@ -23,6 +23,7 @@ export class BuyPageComponent implements OnInit {
               private _productsService:ProductsService,
               private router:Router,
   ) {
+      window.scroll(0, 0);
       this.activatedRoute.params.subscribe( params=> {
       var str = params['id']; //asigna parametros
       var splitted = str.split("-", 4); //separa parametros por guiones

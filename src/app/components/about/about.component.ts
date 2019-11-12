@@ -8,7 +8,9 @@ export class AboutComponent implements OnInit {
 
   public whatsappURL:string = "https://api.whatsapp.com/send?phone=5491167418722&text=Hola!%20Me%20interesan%20los%20productos!"
 
-  constructor() { }
+  constructor() {
+    window.scroll(0, 0);
+  }
 
   ngOnInit() {
   }

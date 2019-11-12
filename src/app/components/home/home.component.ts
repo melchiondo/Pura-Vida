@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductsService } from '../../services/products.service';
 
 @Component({
   selector: 'app-home',
@@ -7,10 +6,8 @@ import { ProductsService } from '../../services/products.service';
 })
 export class HomeComponent {
 
-  product:any = {};
-
-  constructor(private _productsService:ProductsService) {
-    // this.product = this._productsService.getProduct(0);
+  constructor() {
+    window.scroll(0, 0);
   }
 
 

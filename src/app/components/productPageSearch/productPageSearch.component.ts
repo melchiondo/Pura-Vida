@@ -13,7 +13,8 @@ export class ProductPageSearchComponent {
   constructor( private activatedRoute:ActivatedRoute,
                private _productsService:ProductsService
   ) {
-    this.activatedRoute.params.subscribe( params=> {
+      window.scroll(0, 0);
+      this.activatedRoute.params.subscribe( params=> {
       this.product = this._productsService.getProductSearched(params['nombre']);
       console.log(this.product);
     })
