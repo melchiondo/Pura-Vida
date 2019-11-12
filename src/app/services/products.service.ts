@@ -11,6 +11,7 @@ export class ProductsService {
         categoria: "Bikinis",
         tipo: "Bikini 2 piezas",
         colores: ["Fucsia","Amarillo","Negro","Celeste","Rojo","Rosa bebé"],
+        talles: ["1","2","3","4"],
         descCorta: "Conjunto 2 volados al hombro con culotless",
         descLarga: "Conjunto 2 volados al hombro con culotless",
         imgPortada: "assets/img/productos/Malla1.jpeg",
@@ -26,6 +27,7 @@ export class ProductsService {
         categoria: "Bikinis",
         tipo: "Maya entera",
         colores: ["Fucsia","Amarillo","Negro","Rojo","Celeste","Rosa bebé"],
+        talles: ["1","2","3","4"],
         descCorta: "Malla entera con 2 volados al hombro con less",
         descLarga: "Malla entera con 2 volados al hombro con less",
         imgPortada: "assets/img/productos/Malla2.jpeg",
@@ -41,6 +43,7 @@ export class ProductsService {
         categoria: "Bikinis",
         tipo: "Bikini 2 piezas",
         colores: ["Negro","Fucsia","Amarillo","Rojo","Celeste","Mostaza","Rosa bebé"],
+        talles: ["1","2","3","4"],
         descCorta: "Conjunto 2 volados bajo con culotless",
         descLarga: "Conjunto 2 volados bajo con culotless",
         imgPortada: "assets/img/productos/Malla3.jpeg",
@@ -56,6 +59,7 @@ export class ProductsService {
         categoria: "Shorts",
         tipo: "Boxer clásico",
         colores: ["Negro"],
+        talles: ["3","4","5","6","7","8"],
         descCorta: "Short tipo boxer clásico",
         descLarga: "Short tipo boxer clásico",
         imgPortada: "assets/img/productos/Malla4.jpeg",
@@ -71,6 +75,7 @@ export class ProductsService {
         categoria: "Bikinis",
         tipo: "Bikini 2 piezas",
         colores: ["Negro","Celeste","Fucsia","Blanco"],
+        talles: ["1","2","3","4"],
         descCorta: "Conjunto con volados con colaless",
         descLarga: "Conjunto con volados con colaless",
         imgPortada: "assets/img/productos/Malla5.jpeg",
@@ -86,6 +91,7 @@ export class ProductsService {
       //   categoria: "Bikinis",
       //   tipo: "Bikini 2 piezas",
       //   colores: ["Rojo"],
+      //   talles: ["1","2","3","4"],
       //   descCorta: "",
       //   descLarga: "",
       //   imgPortada: "assets/img/productos/nueva1.jpg",
@@ -101,6 +107,7 @@ export class ProductsService {
       //   categoria: "Bikinis",
       //   tipo: "Bikini 2 piezas",
       //   colores: ["Verde fluor"],
+      //   talles: ["1","2","3","4"],
       //   descCorta: "Bikini 2 piezas lisa con culotless",
       //   descLarga: "Bikini 2 piezas lisa con culotless",
       //   imgPortada: "assets/img/productos/nueva2.jpg",
@@ -116,6 +123,7 @@ export class ProductsService {
         categoria: "Bikinis",
         tipo: "Bikini 2 piezas",
         colores: ["Negro"],
+        talles: ["1","2","3","4"],
         descCorta: "Triángulo movible con colaless",
         descLarga: "Triángulo movible con colaless",
         imgPortada: "assets/img/productos/f4.jpeg",
@@ -131,6 +139,7 @@ export class ProductsService {
         categoria: "Bikinis",
         tipo: "Bikini 2 piezas",
         colores: ["Negro"],
+        talles: ["1","2","3","4"],
         descCorta: "Tasa soft fija con vedetina",
         descLarga: "Tasa soft fija con vedetina",
         imgPortada: "assets/img/productos/nueva4.jpg",
@@ -146,6 +155,7 @@ export class ProductsService {
         categoria: "Bikinis",
         tipo: "Bikini 2 piezas",
         colores: ["Animal print"],
+        talles: ["1","2","3","4"],
         descCorta: "Bikini tasa soft fija animal print con colaless",
         descLarga: "Bikini tasa soft fija animal print con colaless",
         imgPortada: "assets/img/productos/f9.jpeg",
@@ -158,7 +168,7 @@ export class ProductsService {
   ];
 
   constructor() {
-    console.log("Servicio de Producto funcionando...");
+    // console.log("Servicio de Producto funcionando...");
   }
 
   getProducts():Product[]{
@@ -223,6 +233,7 @@ export interface Product{
   categoria: string;
   tipo: string;
   colores: string[];
+  talles: string[];
   descCorta: string;
   descLarga: string;
   imgPortada: string;

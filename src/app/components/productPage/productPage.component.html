@@ -93,9 +93,7 @@
            <div class="col-md-3">Talle
              <select class="custom-select mr-sm-2" id="buyPageTalle">
                <option *ngIf="talle > ''" selected>{{talle}}</option>
-               <option>80</option>
-               <option>85</option>
-               <option>90</option>
+               <option *ngFor="let talle of product.talles">{{talle}}</option>
              </select>
            </div>
 
@@ -154,11 +152,7 @@
         </div>
 
         <div id=lista-colores class="col-md-5">
-          <p>
-            <a *ngFor="let color of product.colores">
-              {{color}},
-            </a>
-          </p>
+          <p>{{product.colores}}</p>
         </div>
 
       </div>
@@ -178,6 +172,14 @@
             <p>{{product.marca}}</p>
         </div>
       </div>
+
+      <div class="row animated fadeIn fast">
+        <div class="col-md-1">
+            <small class="text-muted">Talles</small>
+        </div>
+        <div class="col-md-5">
+            <p>{{product.talles}}</p>
+        </div>
 
     </div>
 
