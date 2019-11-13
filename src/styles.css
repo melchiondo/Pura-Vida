@@ -115,6 +115,14 @@ body{
   color: #F0EDEC;
 }
 
+#espacio-tarj-prodPage{
+  color: white;
+}
+
+#header-ProdPage{
+  margin-bottom: 15px;
+}
+
 .verticalLine {
   border-left: solid #cccccc;
 }

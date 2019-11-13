@@ -20,6 +20,7 @@ export class ProductsService {
         marca: "Pura Vida",
         precio: "700.00",
         moneda: "peso",
+        descuento: "20",
       },
       {
         id: "2",
@@ -36,6 +37,7 @@ export class ProductsService {
         marca: "Pura Vida",
         precio: "850.00",
         moneda: "peso",
+        descuento: "30",
       },
       {
         id: "3",
@@ -52,6 +54,7 @@ export class ProductsService {
         marca: "Pura Vida",
         precio: "700.00",
         moneda: "peso",
+        descuento: "25",
       },
       {
         id: "4",
@@ -68,6 +71,7 @@ export class ProductsService {
         marca: "Pura Vida",
         precio: "450.00",
         moneda: "peso",
+        descuento: "20",
       },
       {
         id: "5",
@@ -84,6 +88,7 @@ export class ProductsService {
         marca: "Pura Vida",
         precio: "700.00",
         moneda: "peso",
+        descuento: "15",
       },
       // {
       //   id: "6",
@@ -100,6 +105,7 @@ export class ProductsService {
       //   marca: "Pura Vida",
       //   precio: "450,00",
       //   moneda: "peso",
+      //   descuento: "20",
       // },
       // {
       //   id: "7",
@@ -116,6 +122,7 @@ export class ProductsService {
       //   marca: "Pura Vida",
       //   precio: "650.00",
       //   moneda: "peso",
+      //   descuento: "20",
       // },
       {
         id: "8",
@@ -132,6 +139,7 @@ export class ProductsService {
         marca: "Pura Vida",
         precio: "700.00",
         moneda: "peso",
+        descuento: "20",
       },
       {
         id: "9",
@@ -148,6 +156,7 @@ export class ProductsService {
         marca: "Pura Vida",
         precio: "700.00",
         moneda: "peso",
+        descuento: "30",
       },
       {
         id: "10",
@@ -164,6 +173,7 @@ export class ProductsService {
         marca: "Pura Vida",
         precio: "700.00",
         moneda: "peso",
+        descuento: "10",
       },
   ];
 
@@ -242,4 +252,5 @@ export interface Product{
   marca: string;
   precio: string;
   moneda: string;
+  descuento: string;
 };

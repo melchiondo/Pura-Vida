@@ -18,11 +18,11 @@
 
   <p></p>
 
-  <div class="row animated fadeIn fast shadow p-3 mb-5 bg-white rounded">
-    <div class="container">
+  <div class="row animated fadeIn fast shadow">
+    <div id="header-ProdPage" class="card-header container">
       <h6>{{product.marca}} > {{product.tipo}}</h6>
-      <hr>
     </div>
+
     <div class="col-md-5">
 
       <!-- <img src="{{product.imgPortada}}" class="img-fluid" alt="{{product.descCorta}}"> -->
@@ -65,14 +65,29 @@
       <!-- <hr> -->
       <p>{{product.descCorta}}</p>
 
-    <div class="container text-success">
-      <h1 *ngIf="product.moneda=='peso'">${{product.precio}}</h1>
-      <h1 *ngIf="product.moneda=='dolar'">U$S {{product.precio}}</h1>
-    </div>
+      <p id="reputacion-tarjeta">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <small id="reputacion-text"> Producto solicitado</small>
+      </p>
 
-    <hr>
+      <div class="container row">
 
-    <div class="row animated fadeIn fast">
+        <h2 *ngIf="product.moneda=='peso'" class="text-primary" > <b> $ {{product.precio}} </b> </h2>
+        <h2 *ngIf="product.moneda=='dolar'" class="text-primary"> <b> U$S {{product.precio}} </b> </h2>
+        <h4 id="espacio-tarj-prodPage">.</h4>
+        <h4 class="text-muted"> <del><small> $ {{ (product.precio / ( 1 - (product.descuento/100) )).toFixed(2) }} </small></del> </h4>
+        <h4 id="espacio-tarj-prodPage">.</h4>
+        <h4 id="descuento-text"> <small> {{product.descuento}}% OFF </small> </h4>
+
+      </div>
+
+      <hr>
+
+      <div class="row animated fadeIn fast">
 
        <div class="row animated fadeIn fast">
 

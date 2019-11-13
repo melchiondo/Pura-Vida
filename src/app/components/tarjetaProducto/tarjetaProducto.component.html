@@ -22,10 +22,10 @@ class="card animated fadeIn fast shadow ">
 
       <h5 *ngIf="prodTarjeta.moneda=='peso'" class="text-primary" > <b> $ {{prodTarjeta.precio}} </b> </h5>
       <h5 *ngIf="prodTarjeta.moneda=='dolar'" class="text-primary"> <b> U$S {{prodTarjeta.precio}} </b> </h5>
-
-      <!-- <i class="btn btn-success"><small> OFERTA! 20% OFF </small></i> -->
+      <h6 id="espacio-tarj">...</h6>
+      <h6 class="text-muted"> <del><small> $ {{ (prodTarjeta.precio / ( 1 - (prodTarjeta.descuento/100) )).toFixed(2) }} </small></del> </h6>
       <h6 id="espacio-tarj">.</h6>
-      <h6 id="descuento-text"> <small> 20% OFF </small> </h6>
+      <h6 id="descuento-text"> <small> {{prodTarjeta.descuento}}% OFF </small> </h6>
 
     </div>
 
