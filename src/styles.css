@@ -123,6 +123,11 @@ body{
   margin-bottom: 15px;
 }
 
+#combos-prodPage{
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
 .verticalLine {
   border-left: solid #cccccc;
 }
