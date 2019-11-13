@@ -92,6 +92,29 @@ body{
   line-height: 40%;   /*esta es la propiedad para el interlineado*/
 }
 
+.interli-tarjeta{
+  line-height: 100%;   /*esta es la propiedad para el interlineado*/
+}
+
+#reputacion-tarjeta{
+  white-space:nowrap;
+  line-height: 100%;   /*esta es la propiedad para el interlineado*/
+  color: orange;
+}
+
+#reputacion-text{
+  color: grey;
+}
+
+#descuento-text{
+  /* background-color: green; */
+  color: green;
+}
+
+#espacio-tarj{
+  color: #F0EDEC;
+}
+
 .verticalLine {
   border-left: solid #cccccc;
 }

@@ -1,15 +1,33 @@
 <!-- <div id=tarjeta type="button" (click)="verProducto(index)" -->
 <div id=tarjeta type="button" (click)="verProducto(prodTarjeta.id)"
-class="card animated fadeIn fast shadow p-3 mb-5 rounded">
+class="card animated fadeIn fast shadow ">
 
   <img src="{{prodTarjeta.imgPortada}}" class="card-img-top" alt="{{prodTarjeta.nombre}}">
 
-  <div class="card-body">
+  <div class="card-body interli-tarjeta">
     <h5 class="card-title">{{prodTarjeta.nombre}}</h5>
+
+    <p id="reputacion-tarjeta">
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <small id="reputacion-text"> Producto solicitado</small>
+    </p>
+
     <p class="card-text">{{prodTarjeta.descCorta}}</p>
 
-    <h5 *ngIf="prodTarjeta.moneda=='peso'" class="text-primary">$ {{prodTarjeta.precio}}</h5>
-    <h5 *ngIf="prodTarjeta.moneda=='dolar'" class="text-primary">U$S {{prodTarjeta.precio}}</h5>
+    <div class="container row">
+
+      <h5 *ngIf="prodTarjeta.moneda=='peso'" class="text-primary" > <b> $ {{prodTarjeta.precio}} </b> </h5>
+      <h5 *ngIf="prodTarjeta.moneda=='dolar'" class="text-primary"> <b> U$S {{prodTarjeta.precio}} </b> </h5>
+
+      <!-- <i class="btn btn-success"><small> OFERTA! 20% OFF </small></i> -->
+      <h6 id="espacio-tarj">.</h6>
+      <h6 id="descuento-text"> <small> 20% OFF </small> </h6>
+
+    </div>
 
     <p class="card-text"><small class="text-muted">{{prodTarjeta.temporada}}</small></p>
 
@@ -17,6 +35,10 @@ class="card animated fadeIn fast shadow p-3 mb-5 rounded">
       type="button" class="btn btn-outline-primary btn-block">Ver mas...</button> -->
 
     <!-- <a [routerLink]="['/productPage',i]" class="btn btn-outline-primary btn-block">Ver mas Link...</a> -->
+  </div>
+
+  <div class="card-footer text-center">
+    <small class="text-muted">{{prodTarjeta.temporada}}</small>
   </div>
 
 </div>
