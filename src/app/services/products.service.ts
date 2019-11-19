@@ -1,8 +1,12 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { VisitaWebModel } from '../models/visitaWeb.model';
+
 
 @Injectable()
 export class ProductsService {
 
+  private url = 'https://puravida-web.firebaseio.com';
   private products:Product[] =
   [
       {
@@ -177,8 +181,10 @@ export class ProductsService {
       },
   ];
 
-  constructor() {
-    // console.log("Servicio de Producto funcionando...");
+  constructor( private http: HttpClient) { }
+
+  crearVisitaWeb(visitaWeb: VisitaWebModel){
+    return this.http.post(`${this.url}/visitaWeb.json`, visitaWeb);
   }
 
   getProducts():Product[]{

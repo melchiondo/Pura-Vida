@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { HttpClientModule } from '@angular/common/http';
 
 // Routes
 import { APP_ROUTING } from './app.routes';
@@ -40,7 +41,8 @@ import { FilterNavComponent } from './components/shared/filterNav/filterNav.comp
   imports: [
     BrowserModule,
     MDBBootstrapModule.forRoot(),
-    APP_ROUTING
+    APP_ROUTING,
+    HttpClientModule
   ],
   providers: [
     ProductsService
