@@ -185,14 +185,6 @@ export class ProductsService {
 
   constructor( private http: HttpClient) { }
 
-  crearVisitaWeb(visitaWeb: VisitaWebModel){
-    return this.http.post(`${this.urlFirebase}/visitaWeb.json`, visitaWeb);
-  }
-
-  crearVisitaProduct(visitaProduct: VisitaProductModel){
-    return this.http.post(`${this.urlFirebase}/visitaProduct.json`, visitaProduct);
-  }
-
   getProducts():Product[]{
     return this.products;
   }

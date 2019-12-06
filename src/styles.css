@@ -224,6 +224,14 @@ body{
   margin-top: 0px;
 }
 
+.cardMetricsTitle{
+  margin-top: 25px;
+}
+
+.cardMetricsText{
+  margin-left: 15px;
+}
+
 #filtros{
   /* margin-top: 72px; */
   /* margin-left: 60px;

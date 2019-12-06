@@ -1,0 +1,39 @@
+<div class="">
+
+    <div class="jumbotron titulo">
+      <div id=tituProd>
+        <h1 class="display-4 animated fadeInDown">Métricas</h1>
+        <hr class="my-4">
+      </div>
+    </div>
+
+    <div class="row">
+
+      <div class="col-md-3"></div>
+
+      <div class="col-md-3">
+        <div class="card interli-tarjeta animated fadeIn fast shadow">
+          <h3 class="card-title cardMetricsTitle text-center">Visitas al sitio</h3>
+          <hr>
+          <h6 class="card-text cardMetricsText" *ngFor="let visita of visitasWeb">
+            > {{visita.timestamp}}
+          </h6>
+        </div>
+      </div>
+
+      <!-- <div class="col-md-1"></div> -->
+
+      <div class="col-md-4">
+        <div class="card interli-tarjeta animated fadeIn fast shadow">
+          <h3 class="card-title cardMetricsTitle text-center">Visitas a los productos</h3>
+          <hr>
+          <h6 class="card-text cardMetricsText" *ngFor="let visita of visitasProduct">
+            > <u><b>Producto {{visita.product}}</b></u> : {{visita.timestamp}}
+          </h6>
+        </div>
+      </div>
+
+    </div>
+
+
+</div>

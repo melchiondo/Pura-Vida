@@ -8,6 +8,7 @@ import { APP_ROUTING } from './app.routes';
 
 //Services
 import { ProductsService } from './services/products.service';
+import { MetricsService } from './services/metrics.service';
 
 // Components
 import { AppComponent } from './app.component';
@@ -22,6 +23,7 @@ import { TarjetaProductoComponent } from './components/tarjetaProducto/tarjetaPr
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { BuyPageComponent } from './components/buyPage/buyPage.component';
 import { FilterNavComponent } from './components/shared/filterNav/filterNav.component';
+import { BackendComponent } from './components/backend/backend.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,8 @@ import { FilterNavComponent } from './components/shared/filterNav/filterNav.comp
     TarjetaProductoComponent,
     FooterComponent,
     BuyPageComponent,
-    FilterNavComponent
+    FilterNavComponent,
+    BackendComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +48,8 @@ import { FilterNavComponent } from './components/shared/filterNav/filterNav.comp
     HttpClientModule
   ],
   providers: [
-    ProductsService
+    ProductsService,
+    MetricsService
   ],
   bootstrap: [AppComponent]
 })

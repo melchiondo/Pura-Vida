@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
 import { ProductsService } from '../../services/products.service';
+import { MetricsService } from '../../services/metrics.service';
 import { VisitaProductModel } from '../../models/visitaProduct.model';
 import { isDevMode } from '@angular/core';
 
@@ -22,6 +23,7 @@ export class ProductPageComponent {
 
   constructor( private activatedRoute:ActivatedRoute,
                private _productsService:ProductsService,
+               private _metricsService:MetricsService,
                private router:Router,
   ) {
       window.scroll(0, 0);
@@ -48,7 +50,7 @@ export class ProductPageComponent {
     this.visitaProduct.timestamp = d;
     this.visitaProduct.product = this.keyProd;
 
-    this._productsService.crearVisitaProduct( this.visitaProduct)
+    this._metricsService.crearVisitaProduct( this.visitaProduct)
     .subscribe( resp=> {
       console.log(resp);
     });

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductsService, Product } from '../../services/products.service';
+import { MetricsService } from '../../services/metrics.service';
 import { VisitaWebModel } from '../../models/visitaWeb.model';
 import { isDevMode } from '@angular/core';
 
@@ -12,7 +12,7 @@ export class HomeComponent {
 
   visitaWeb: VisitaWebModel = new VisitaWebModel();
 
-  constructor(private _productsService: ProductsService) {
+  constructor(private _metricsService: MetricsService) {
     window.scroll(0, 0);
 
     if(!isDevMode()){
@@ -26,7 +26,7 @@ export class HomeComponent {
     d.setHours(d.getHours()-3); // resto 3 horas porque el servidor de FIREBASE está en EEUU
     this.visitaWeb.timestamp = d;
 
-    this._productsService.crearVisitaWeb( this.visitaWeb)
+    this._metricsService.crearVisitaWeb( this.visitaWeb)
     .subscribe( resp=> {
       console.log(resp);
     });
