@@ -2,12 +2,17 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { VisitaWebModel } from '../models/visitaWeb.model';
 import { VisitaProductModel } from '../models/visitaProduct.model';
+import { ProductModel } from '../models/product.model';
+import { map } from 'rxjs/operators';
+import { pipe } from 'rxjs';
+
 
 
 @Injectable()
 export class ProductsService {
 
   private urlFirebase = 'https://puravida-web.firebaseio.com';
+  private urlApiJava = 'http://puravidaapi-env-1.eba-y9m2hgua.us-east-1.elasticbeanstalk.com';
 
   private products:Product[] =
   [
@@ -185,9 +190,36 @@ export class ProductsService {
 
   constructor( private http: HttpClient) { }
 
-  getProducts():Product[]{
-    return this.products;
+  // getProducts():Product[]{
+  //   return this.products;
+  // }
+
+  getProducts(){
+    return this.http.get(`${this.urlApiJava}/productos`)
+      .pipe(
+        map(this.crearArregloProducts)
+      );
   }
+
+  crearArregloProducts( productObj: object){
+    const products: ProductModel[] = [];
+
+    if(productObj === null){
+      return [];
+    }
+
+    Object.keys(productObj).forEach( key => {
+        const product: ProductModel = productObj[key];
+        products.push(product);
+    });
+
+    return products;
+  }
+
+
+
+
+
 
   getProduct( id:string ):Product{
     for(let product of this.products){

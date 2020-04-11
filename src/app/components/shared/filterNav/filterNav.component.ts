@@ -16,7 +16,7 @@ export class FilterNavComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.products = this._productsService.getProducts();
+    // this.products = this._productsService.getProducts();
     this.tipoProds = this._productsService.getCategorias();
   }
 
